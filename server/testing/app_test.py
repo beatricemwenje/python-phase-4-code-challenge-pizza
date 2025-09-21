@@ -1,7 +1,7 @@
-from models import Restaurant, RestaurantPizza, Pizza
-from app import app, db
+import pytest
 from faker import Faker
-
+from server.app import app, db   # ✅ use db from app, not a new one
+from server.models import Restaurant, RestaurantPizza, Pizza
 
 class TestApp:
     '''Flask application in app.py'''
